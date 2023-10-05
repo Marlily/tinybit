@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-width-half {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .custom-width-half {
+        width: calc(50% - 1.7rem)
+    }
+}
