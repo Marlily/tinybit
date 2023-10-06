@@ -18,7 +18,7 @@ const Footer = () => {
                         />
                     </Link>
 
-                    <a target="_blank" href="https://instagram.com/tinybit_pages" className="translate-y-16">
+                    <a target="_blank" href="https://instagram.com/tinybit_pages" className="translate-y-28">
                         <Image 
                             src="/instagram.svg"
                             width={50}
@@ -28,21 +28,20 @@ const Footer = () => {
                     </a>
                 </div>
 
-                <div className="w-full border-b-2 border-white flex flex-wrap align-center justify-between pb-7 lg:mb-0">
-                    <a href="mailto:kontakt@tinybit.pl" className="text-xl text-white font-normal hover:text-orange transition mb-5">kontakt@tinybit.pl</a>
+                <div className="w-full border-b border-white flex flex-wrap align-center justify-between pb-4 lg:pb-7 lg:mb-0">
+                    <a href="mailto:kontakt@tinybitcreations.pl" className="text-xl text-white font-normal hover:text-orange transition mb-5">kontakt@tinybitcreations.pl</a>
+                    
                     <nav>
                         <ul className="flex flex-wrap items-center gap-x-10">
-                            <li><Link href="/kontakt" className="text-xl text-white uppercase font-normal border-b pb-1 border-transparent transition hover:border-white">Realizacje</Link></li>
-                            <li><Link href="/kontakt" className="text-xl text-white uppercase font-normal border-b pb-1 border-transparent transition hover:border-white">Kontakt</Link></li>
+                            <li><Link href="/oferta" className="text-base lg:text-xl text-white uppercase font-normal border-b pb-1 border-transparent transition hover:border-white">Oferta</Link></li>
+                            <li><Link href="/kontakt" className="text-base lg:text-xl text-white uppercase font-normal border-b pb-1 border-transparent transition hover:border-white">Kontakt</Link></li>
                         </ul>
                     </nav>
+
                 </div>
 
-                <p className="m-0 text-xl font-light text-white py-6">copyright 2023</p>
+                <p className="m-0 text-lg font-light text-white py-6">copyright 2023</p>
                 
-                
-    
-
             </div>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="482" viewBox="0 0 1440 482" fill="none"
