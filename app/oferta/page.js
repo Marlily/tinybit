@@ -28,10 +28,10 @@ export default function Offer() {
          </header>
 
          <section id="offer" className='pt-20 lg:pt-36 pb-16 lg:pb-28 relative'>
-            <div className="container">
+            <div ref={ref} className="container">
                <div className="xl:w-5/6 flex flex-wrap mx-auto">
                   <div className={`w-full lg:w-1/2 text-center lg:px-10 transition duration-300 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                     <h3 ref={ref} className={`uppercase text-4xl text-dark font-semibold font-second mb-7`}>Strona wizytówkowa</h3>
+                     <h3 className={`uppercase text-4xl text-dark font-semibold font-second mb-7`}>Strona wizytówkowa</h3>
                      <p className="text-[2rem] mb-12">od <span className='font-bold text-violet'>1500 zł</span> netto</p>
                      <ul className="list-none p-0 m-0">
                         <li className="text-dark text-xl mb-8 before:content-[''] before:w-[0.625rem] before:h-[0.625rem] before:inline-block before:bg-orange before:rounded-full before:mr-4">Nowoczesna</li>
@@ -57,7 +57,7 @@ export default function Offer() {
 
             </div>
 
-            <div className="rounded-full w-[14.8rem] h-[14.3rem] bg-violet absolute -left-36 bottom-20"></div>
+            <div className="rounded-full w-[14.8rem] h-[14.3rem] bg-violet absolute -left-48 lg:-left-36 bottom-20"></div>
          </section>
 
          <section className='relative py-10'>
@@ -86,7 +86,7 @@ export default function Offer() {
             <div className="container">
                <div className="lg:w-5/6 mx-auto">
                <h2 className={`uppercase text-4xl lg:text-5xl font-second font-semibold w-full text-center mb-12 lg:mb-24 transition duration-400 ${isInView3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Jak przebiega współpraca?</h2>
-               <ul className="list-none p-0 m-0">
+               <ul ref={ref3} className="list-none p-0 m-0">
                   <li className={`flex mb-8 items-center transition delay-[200ms] duration-400 ${isInView3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                      <figure className='w-[65px] mr-5'>
                         <Image
@@ -103,7 +103,7 @@ export default function Offer() {
                      </div>
                   </li>
 
-                  <li  ref={ref3} className={`flex mb-8 items-center transition delay-[300ms] duration-400 ${isInView3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                  <li  className={`flex mb-8 items-center transition delay-[300ms] duration-400 ${isInView3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                      <figure className='w-[65px] mr-5'>
                         <Image
                            src="/2.svg"
@@ -168,8 +168,8 @@ export default function Offer() {
                   </li>
                </ul>
 
-               <div className="w-full text-center mt-24">
-                     <Link href="/projekty" className="inline-block bg-green hover:bg-green-hover hover:shadow-lg transition py-2 px-3 text-xl font-second text-white font-bold uppercase">Poproś o darmową wycenę</Link>
+               <div className="w-full text-center mt-10 lg:mt-24">
+                     <Link href="/kontakt" className="inline-block bg-green hover:bg-green-hover hover:shadow-lg transition py-2 px-3 text-xl font-second text-white font-bold uppercase">Poproś o darmową wycenę</Link>
                   </div>
             </div>
             </div>

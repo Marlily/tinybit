@@ -22,9 +22,9 @@ export default function Home() {
                     initial={{ x: "50%", opacity: 0 }}
                     animate={{ x: "0", opacity: 1 }}
           >
-            <h1 className="text-7xl font-second font-bold mb-5">Cześć!<br />Jestem Martyna</h1>
-            <p className="text-3xl max-w-[35.6rem] mb-5">Stworzę dla Ciebie <span className="text-pink font-medium">oryginalną</span> stronę internetową - od projektu po publikację strony w sieci.</p>
-            <p className="text-2xl max-w-[35.6rem]">Wybierz jedną z <span className="font-medium">gotowych stron internetowych</span> lub&nbsp;<span className="font-medium">stworzenie indywidualnego projektu.</span></p>
+            <h1 className="text-4xl md:text-7xl font-second font-bold mb-5 mt-6 md:mt-0">Cześć!<br />Jestem Martyna</h1>
+            <p className="text-2xl md:text-3xl max-w-[35.6rem] mb-5">Stworzę dla Ciebie <span className="text-pink font-medium">oryginalną</span> stronę internetową - od projektu po publikację strony w sieci.</p>
+            <p className="text-xl md:text-2xl max-w-[35.6rem]">Wybierz jedną z <span className="font-medium">gotowych stron internetowych</span> lub&nbsp;<span className="font-medium">stworzenie indywidualnego projektu.</span></p>
 
             <Link href="/oferta" className="inline-block bg-orange hover:bg-orange-hover hover:shadow-lg transition py-2 px-3 text-xl font-second mr-5 text-white font-bold uppercase mt-12">Oferta</Link>
             <Link href="/#realizacje" className="inline-block bg-green hover:bg-green-hover hover:shadow-lg transition py-2 px-3 text-xl font-second text-white font-bold uppercase mt-6">Realizacje</Link>
@@ -48,7 +48,7 @@ export default function Home() {
 
       <section className="pt-20 lg:pt-28 pb-20 lg:pb-24 relative">
 
-        <div className="rounded-full w-[14.8rem] h-[14.3rem] bg-violet absolute -left-40 top-14"></div>
+        <div className="rounded-full w-[14.8rem] h-[14.3rem] bg-violet absolute -left-48 lg:-left-40 top-14"></div>
 
         <div ref={ref} className={`container flex flex-wrap transition duration-300 delay-500 ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="font-second uppercase text-5xl font-semibold w-full text-center mb-6 lg:mb-32" 
@@ -66,7 +66,7 @@ export default function Home() {
 
             <ul className="w-full lg:w-1/2 p-0 m-0 flex flex-wrap items-start gap-y-12 lg:gap-y-0">
               <li className='w-1/2 text-center'>
-                <figure className="h-[5rem] relative mb-4">
+                <figure className="h-[3.5rem] lg:h-[5rem] relative mb-4">
                 <Image 
                   src="/1.svg"
                   alt="ikona"
@@ -79,7 +79,7 @@ export default function Home() {
               </li>
 
               <li className='w-1/2 text-center'>
-              <figure className="h-[5rem] relative mb-4">
+              <figure className="h-[3.5rem] lg:h-[5rem] relative mb-4">
                 <Image 
                   src="/2.svg"
                   alt="ikona"
@@ -91,7 +91,7 @@ export default function Home() {
               </li>
 
               <li className='w-1/2 text-center'>
-              <figure className="h-[5rem] relative mb-4">
+              <figure className="h-[3.5rem] lg:h-[5rem] relative mb-4">
                 <Image 
                   src="/3.svg"
                   alt="ikona"
@@ -103,7 +103,7 @@ export default function Home() {
               </li>
 
               <li className='w-1/2 text-center'>
-              <figure className="h-[5rem] relative mb-4">
+              <figure className="h-[3.5rem] lg:h-[5rem] relative mb-4">
                 <Image 
                   src="/4.svg"
                   alt="ikona"
@@ -120,7 +120,7 @@ export default function Home() {
 
       </section>
 
-      <section ref={ref2} className="py-14 relative mb-16" id="realizacje">
+      <section ref={ref2} className="py-14 relative mb-5 lg:mb-16" id="realizacje">
 
         <div className="absolute w-full h-[20.3rem] bg-light-gray top-0 -z-10 "></div>
 
@@ -128,7 +128,7 @@ export default function Home() {
 
           <h2 className="uppercase font-second text-5xl font-semibold w-full text-center mb-20">Ostatnie realizacje</h2>
 
-          <figure className={`w-1/2 pr-4 transition duration-500 delay-500 ${isInView2 ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
+          <figure className={`lg:w-1/2 lg:pr-4 transition duration-500 delay-500 ${isInView2 ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
             <Image 
               src="/project1.png"
               alt="project"
@@ -138,7 +138,7 @@ export default function Home() {
             />
           </figure>
 
-          <figure className={`w-1/2 pl-4 transition duration-500 delay-700 ${isInView2 ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
+          <figure className={`lg:w-1/2 lg:pl-4 mt-5 lg:mt-0 transition duration-500 delay-700 ${isInView2 ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
             <Image 
               src="/project2.png"
               alt="project"

@@ -28,8 +28,8 @@ const Navbar = () => {
                         <Link href="/oferta" className="font-second uppercase font-medium text-dark text-xl lg:text-base relative after:content-[''] after:absolute after:block after:transition-[width] after:w-0 after:bg-dark after:h-px hover:after:w-full after:opacity-0 lg:after:opacity-100"></Link>
                     </li>
 
-                    <li className="mt-3">
-                        <Link href="/kontakt" className="bg-blue font-second lg:hidden whitespace-nowrap text-white font-bold py-2 px-3 uppercase text-lghover:shadow-lg hover:bg-blue-hover transition">Darmowa wycena</Link>
+                    <li className="mt-3 lg:hidden">
+                        <Link href="/kontakt" className="bg-blue font-second whitespace-nowrap text-white font-bold py-2 px-3 uppercase text-lghover:shadow-lg hover:bg-blue-hover transition">Darmowa wycena</Link>
                     </li>
                     
                 
