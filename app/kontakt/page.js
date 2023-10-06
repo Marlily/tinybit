@@ -37,7 +37,10 @@ export default function Contact() {
 
          <section className='pb-16 lg:pb-36'>
             <div ref={ref2} className="container">
-               <form action="POST" data-netlify="true" className={`max-w-[61.25rem] mx-auto flex flex-wrap justify-between transition delay-200 duration-400 ${isInView2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+               <form action="POST" name="contact" data-netlify="true" 
+                  className={`max-w-[61.25rem] mx-auto flex flex-wrap justify-between transition delay-200 duration-400 ${isInView2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+
+               >
                   <label className='custom-width-half mb-6 xs:mb-0'>
                      Imię i nazwisko*
                      <input type="text" name="name" className="w-full border-dark border p-3 mt-2" required/>
@@ -55,7 +58,7 @@ export default function Contact() {
 
                   <input type="submit" value="Wyślij" className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase'/>
                   
-                  
+                  <input type="hidden" name="form-name" value="contact" />
                   
                </form>
             </div>

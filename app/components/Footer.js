@@ -24,6 +24,7 @@ const Footer = () => {
                             width={50}
                             height={50}
                             className="brightness-200 invert"
+                            alt="ikona"
                         />
                     </a>
                 </div>
