@@ -11,3 +11,13 @@
         width: calc(50% - 1.7rem)
     }
 }
+
+.container {
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
