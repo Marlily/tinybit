@@ -24,7 +24,7 @@ export default function Home() {
           >
             <h1 className="text-4xl md:text-7xl font-second font-bold mb-5 mt-6 md:mt-0">Cześć!<br />Jestem Martyna</h1>
             <p className="text-2xl md:text-3xl max-w-[35.6rem] mb-5">Stworzę dla Ciebie <span className="text-pink font-medium">oryginalną</span> stronę internetową - od projektu po publikację strony w sieci.</p>
-            <p className="text-xl md:text-2xl max-w-[35.6rem]">Wybierz jedną z <span className="font-medium">gotowych stron internetowych</span> lub&nbsp;<span className="font-medium">stworzenie indywidualnego projektu.</span></p>
+            {/* <p className="text-xl md:text-2xl max-w-[35.6rem]">Wybierz jedną z <span className="font-medium">gotowych stron internetowych</span> lub&nbsp;<span className="font-medium">stworzenie indywidualnego projektu.</span></p> */}
 
             <Link href="/oferta" className="inline-block bg-orange hover:bg-orange-hover hover:shadow-lg transition py-2 px-3 text-xl font-second mr-5 text-white font-bold uppercase mt-12">Oferta</Link>
             <Link href="/#realizacje" className="inline-block bg-green hover:bg-green-hover hover:shadow-lg transition py-2 px-3 text-xl font-second text-white font-bold uppercase mt-6">Realizacje</Link>
