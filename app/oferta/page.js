@@ -51,7 +51,7 @@ export default function Offer() {
                   </div>
 
                   <div className={`w-full text-center mt-12 transition duration-700 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
-                     <Link href="/projekty" className="inline-block bg-orange hover:bg-orange-hover hover:shadow-lg transition py-2 px-3 text-xl font-second text-white font-bold uppercase">Poproś o darmową wycenę</Link>
+                     <Link href="/kontakt" className="inline-block bg-orange hover:bg-orange-hover hover:shadow-lg transition py-2 px-3 text-xl font-second text-white font-bold uppercase">Poproś o darmową wycenę</Link>
                   </div>
                </div>
 
