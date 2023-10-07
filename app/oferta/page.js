@@ -46,7 +46,7 @@ export default function Offer() {
                         <li className="text-dark text-xl mb-8 before:content-[''] before:w-[0.625rem] before:h-[0.625rem] before:inline-block before:bg-orange before:rounded-full before:mr-4">Aktualizacja wtyczek</li>
                         <li className="text-dark text-xl mb-8 before:content-[''] before:w-[0.625rem] before:h-[0.625rem] before:inline-block before:bg-orange before:rounded-full before:mr-4">Sprawdzenie zabezpieczeń</li>
                         <li className="text-dark text-xl before:content-[''] before:w-[0.625rem] before:h-[0.625rem] before:inline-block before:bg-orange before:rounded-full before:mr-4">Szybka pomoc w razie awarii</li>
-                        <li className="text-md mt-10 leading-4 lg:px-10 xl:px-20 italic">Edycja, dodawanie zmian na&nbsp;stronie wyceniane są&nbsp;dodatkowo</li>
+                        <li className="text-md mt-10 leading-4 px-8 lg:px-10 xl:px-20 italic">Edycja, dodawanie zmian na&nbsp;stronie wyceniane są&nbsp;dodatkowo</li>
                      </ul>
                   </div>
 
