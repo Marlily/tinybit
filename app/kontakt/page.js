@@ -41,7 +41,7 @@ export default function Contact() {
 
          <section className='pb-16 lg:pb-36'>
             <div ref={ref2} className="container">
-               <form action="/formularz" method="post" name="contact" data-netlify="true" 
+               <form action="/formularz" method="post" name="wycena" data-netlify="true" 
                   className={`transition delay-200 duration-400 ${isInView2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
                      <div id="step-1" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-1" ? 'flex' : 'hidden'}`}>
