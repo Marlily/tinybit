@@ -59,7 +59,7 @@ export default function Contact() {
                   className={`bg-light-gray px-4 py-12 border-violet border-t-8 transition delay-200 duration-400 ${isInView2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
                      <div id="step-1" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="form-name" value="wycena" />
 
                         <div className="flex w-full justify-center items-center mb-10">
                               <Image 
