@@ -122,16 +122,16 @@ export default function Contact() {
                               <p className='text-lg font-medium'>Rodzaj strony internetowej</p>
                         </div>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="type" className="hidden" onChange={ (e) => { setType('one page') }} /><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Strona typu one page
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="radio" name="type" className="opacity-0 absolute" onChange={ (e) => { setType('one page') }} /><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Strona typu one page
 
                            <p className=' mt-5 text-base italic'>W formie jednej, długiej strony z sekcjami, bez zakładek<br/>
                            <a className="text-violet" target="_blank" href="https://marlily.github.io/foodie/">Zobacz przykład</a>
                            </p>
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="type" className="hidden" onChange={ (e) => { setType('klasyczna strona') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border border-violet mr-3'></span> Strona z zakładkami
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="radio" name="type" className="opacity-0 absolute" onChange={ (e) => { setType('klasyczna strona') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border border-violet mr-3'></span> Strona z zakładkami
 
                            <p className='mt-5 text-base italic'>Strona główna oraz podstrony<br/>
                            <a className="text-violet" target="_blank" href="https://tomekszostak.com/">Zobacz przykład</a>
@@ -155,23 +155,23 @@ export default function Contact() {
                               <p className='text-lg font-medium'>Rodzaj menu</p>
                         </div>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu" className="hidden" onChange={ (e) => { setMenu('brak') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Brak (niezalecane)
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('brak') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Brak (niezalecane)
 
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu" className="hidden" onChange={ (e) => { setMenu('standoardowe góra') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe u góry strony
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('standoardowe góra') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe u góry strony
 
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu" className="hidden" onChange={ (e) => { setMenu('standardowe z boku') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe z boku
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('standardowe z boku') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe z boku
 
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu" className="hidden" onChange={ (e) => { setMenu('hamburger') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Hamburger - wysuwane po kliknięciu przycisku
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('hamburger') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Hamburger - wysuwane po kliknięciu przycisku
 
                         </label>
                         
@@ -194,38 +194,38 @@ export default function Contact() {
                               <p className='text-lg font-medium'>Podaj pozycje menu</p>
                         </div>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-home" className="hidden" /><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Strona główna
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-home" className="opacity-0 absolute" /><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Strona główna
 
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-about" className="hidden"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> O mnie/O nas
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-about" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> O mnie/O nas
 
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-offer" className="hidden"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Oferta
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-offer" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Oferta
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-portfolio" className="hidden"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Portfolio
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-portfolio" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Portfolio
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-gallery" className="hidden"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Galeria
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-gallery" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Galeria
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-realizations" className="hidden"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Realizacje
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-realizations" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Realizacje
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-blog" className="hidden"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Blog
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-blog" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Blog
                         </label>
 
-                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="checkbox" name="menu-contact" className="hidden"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Kontakt
+                        <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
+                           <input type="checkbox" name="menu-contact" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Kontakt
                         </label>
 
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Inne:</h3>
