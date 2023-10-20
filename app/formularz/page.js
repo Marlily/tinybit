@@ -17,7 +17,7 @@ export default function Contact() {
             </div>
          </header>
 
-         <section className="pt-20 lg:pt-28 pb-16 lg:pb-20">
+         <section className="pt-20 lg:pt-28 pb-16 lg:pb-20 min-h-[40vh]">
             <div className="container">
                <p className='max-w-[46rem] mx-auto text-center text-2xl'>
                   Formularz wysłany, wkrótce otrzymasz odpowiedź! :)

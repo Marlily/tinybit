@@ -75,12 +75,12 @@ export default function Contact() {
 
                         <label className='custom-width-half mb-6 xs:mb-0'>
                            Imię i nazwisko*
-                           <input type="text" name="name" className="w-full border-dark border p-3 mt-2" value={name} onChange={ (e) => { setName(e.target.value) }}/>
+                           <input type="text" name="Imię i nazwisko:" className="w-full border-dark border p-3 mt-2" value={name} onChange={ (e) => { setName(e.target.value) }}/>
                         </label>
 
                         <label className='custom-width-half'>
                            E-mail*
-                           <input type="email" name="email" className="w-full border-dark border p-3 mt-2" value={email} onChange={ (e) => { setEmail(e.target.value) }}/>
+                           <input type="email" name="Email:" className="w-full border-dark border p-3 mt-2" value={email} onChange={ (e) => { setEmail(e.target.value) }}/>
                         </label>                        
                      </div>
 
@@ -102,7 +102,7 @@ export default function Contact() {
 
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Napisz proszę coś o sobie - czym zajmuje się Twoja firma?</h3>
 
-                        <textarea name="main-info" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3' value={about} onChange={ (e) => { setAbout(e.target.value) }}></textarea>
+                        <textarea name="O fimie:" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3' value={about} onChange={ (e) => { setAbout(e.target.value) }}></textarea>
                         
 
                      </div>
@@ -123,7 +123,7 @@ export default function Contact() {
                         </div>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="radio" name="type" className="opacity-0 absolute" onChange={ (e) => { setType('one page') }} /><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Strona typu one page
+                           <input type="radio" name="Rodzaj strony:" className="opacity-0 absolute" value="one page" onChange={ (e) => { setType('one page') }} /><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Strona typu one page
 
                            <p className=' mt-5 text-base italic'>W formie jednej, długiej strony z sekcjami, bez zakładek<br/>
                            <a className="text-violet" target="_blank" href="https://marlily.github.io/foodie/">Zobacz przykład</a>
@@ -131,7 +131,7 @@ export default function Contact() {
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="radio" name="type" className="opacity-0 absolute" onChange={ (e) => { setType('klasyczna strona') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border border-violet mr-3'></span> Strona z zakładkami
+                           <input type="radio" name="Rodzaj strony:" className="opacity-0 absolute" value="strona z zakładkami"  onChange={ (e) => { setType('klasyczna strona') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border border-violet mr-3'></span> Strona z zakładkami
 
                            <p className='mt-5 text-base italic'>Strona główna oraz podstrony<br/>
                            <a className="text-violet" target="_blank" href="https://tomekszostak.com/">Zobacz przykład</a>
@@ -156,22 +156,22 @@ export default function Contact() {
                         </div>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('brak') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Brak (niezalecane)
+                           <input type="radio" name="Menu:" value="brak" className="opacity-0 absolute" onChange={ (e) => { setMenu('brak') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Brak (niezalecane)
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('standoardowe góra') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe u góry strony
+                           <input type="radio" name="Menu:" value="standardowe u góry" className="opacity-0 absolute" onChange={ (e) => { setMenu('standoardowe góra') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe u góry strony
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('standardowe z boku') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe z boku
+                           <input type="radio" name="Menu:" value="standardowe z boku" className="opacity-0 absolute" onChange={ (e) => { setMenu('standardowe z boku') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe z boku
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="radio" name="menu" className="opacity-0 absolute" onChange={ (e) => { setMenu('hamburger') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Hamburger - wysuwane po kliknięciu przycisku
+                           <input type="radio" name="Menu:" value="hamburger" className="opacity-0 absolute" onChange={ (e) => { setMenu('hamburger') }}/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Hamburger - wysuwane po kliknięciu przycisku
 
                         </label>
                         
@@ -195,42 +195,42 @@ export default function Contact() {
                         </div>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-home" className="opacity-0 absolute" /><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Strona główna
+                           <input type="checkbox" name="Menu Strona główna" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Strona główna
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-about" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> O mnie/O nas
+                           <input type="checkbox" name="Menu O mnie" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> O mnie/O nas
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-offer" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Oferta
+                           <input type="checkbox" name="Menu Oferta" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Oferta
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-portfolio" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Portfolio
+                           <input type="checkbox" name="Menu Portfolio" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Portfolio
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-gallery" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Galeria
+                           <input type="checkbox" name="Menu Galeria" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Galeria
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-realizations" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Realizacje
+                           <input type="checkbox" name="Menu Realizacje" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Realizacje
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-blog" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Blog
+                           <input type="checkbox" name="Menu Blog" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Blog
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center relative'>
-                           <input type="checkbox" name="menu-contact" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Kontakt
+                           <input type="checkbox" name="Menu Kontakt" className="opacity-0 absolute"/><span className='h-[1rem] w-[1rem] inline-block border mr-3 border-violet'></span> Kontakt
                         </label>
 
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Inne:</h3>
 
-                        <textarea name="menu-others" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
+                        <textarea name="Menu pozycje inne:" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
                        
 
                      </div>
@@ -255,7 +255,7 @@ export default function Contact() {
 
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Opisz proszę swoje oczekiwania: co powinno znaleźć się na stronie?</h3>
 
-                        <textarea name="page-informations" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3' ></textarea>
+                        <textarea name="Oczekiwania:" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3' ></textarea>
                        
 
                      </div>
@@ -280,12 +280,12 @@ export default function Contact() {
 
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">W jakiej kolorystyce i stylu powinna być strona?</h3>
 
-                        <textarea name="style" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
+                        <textarea name="Styl strony:" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
 
                         <h3 className="w-full font-medium text-md mt-16 mb-3 text-center ">Opcjonalnie: Podaj linki do stron, którymi mogę się inspirować</h3>
                         <p className="w-full text-xs italic text-center mb-5">Polecam wejść na stronę Pinterest, wyszukać hasło "website design" - można tam zobaczyć wiele ciekawych projektów. <br/>Dzięki linkom łatwiej będzie mi zrozumieć Twoje oczekiwania</p>
 
-                        <textarea name="urls" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
+                        <textarea name="Inspiracje:" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
                         
 
                      </div>
@@ -310,7 +310,7 @@ export default function Contact() {
 
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Jeśli masz dodatkowe informacje, wpisz je poniżej</h3>
 
-                        <textarea name="others" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
+                        <textarea name="Dodatkowe informacje:" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
 
 
                         <div className="w-full text-center mt-6">  
