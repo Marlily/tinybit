@@ -13,6 +13,21 @@ export default function Contact() {
    const isInView2 = useInView(ref2);
    const isInView3 = useInView(ref3);
    const [activeStep, setActiveStep] = useState('step-1');
+
+   const [name, setName] = useState('');
+   const [email, setEmail] = useState('');
+   const [about, setAbout] = useState('');
+   const [type, setType] = useState('');
+   const [menu, setMenu] = useState('');
+   const [menuPosition, setMenuPosition] = useState('');
+   const [menuOthers, setMenuOthers] = useState('');
+   const [whatOnPage, setWhatOnPage] = useState('');
+   const [style, setStyle] = useState('');
+
+   const validateFormm = (e) => {
+      
+
+   }
    
   return (
      <>
@@ -40,44 +55,42 @@ export default function Contact() {
          </section>
 
          <section className='pb-16 lg:pb-36'>
-            <div ref={ref2} className="container">
+            <div ref={ref2} className="container  ">
+              
                <form action="/formularz" method="post" name="wycena" data-netlify="true" 
-                  className={`transition delay-200 duration-400 ${isInView2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                  className={`bg-light-gray py-12 border-violet border-t-8 transition delay-200 duration-400 ${isInView2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
-                     <div id="step-1" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-1" ? 'flex' : 'hidden'}`}>
+                     <div id="step-1" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
                         <input type="hidden" name="form-name" value="contact" />
 
                         <div className="flex w-full justify-center items-center mb-10">
                               <Image 
                                  src="/1.svg"
                                  alt="ikona"
-                                 width={40}
-                                 height={40}
+                                 width={37}
+                                 height={30}
                                  className='mr-4'
                               />
-                              <p className='text-lg font-medium'>Podaj proszę dane kontaktowe</p>
+                              <p className='text-lg font-medium'>Dane kontaktowe</p>
                         </div>
 
 
                         <label className='custom-width-half mb-6 xs:mb-0'>
                            Imię i nazwisko*
-                           <input type="text" name="name" className="w-full border-dark border p-3 mt-2" required/>
+                           <input type="text" name="name" className="w-full border-dark border p-3 mt-2" value={name} onChange={ (e) => { setName(e.target.value) }}/>
                         </label>
 
                         <label className='custom-width-half'>
                            E-mail*
-                           <input type="email" name="email" className="w-full border-dark border p-3 mt-2" required/>
-                        </label>
-
-                        <button className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-2') }>Dalej</button>
-                        
+                           <input type="email" name="email" className="w-full border-dark border p-3 mt-2" value={email} onChange={ (e) => { setEmail(e.target.value) }}/>
+                        </label>                        
                      </div>
 
                      {/* STEP 2 */}
-                     <div id="step-2" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-2" ? 'flex' : 'hidden'}`}>
+                     <div id="step-2" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
 
 
-                        <div className="flex w-full justify-center items-center mb-10">
+                        <div className="flex w-full justify-center items-center mb-5">
                               <Image 
                                  src="/2.svg"
                                  alt="ikona"
@@ -91,19 +104,13 @@ export default function Contact() {
 
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Napisz proszę coś o sobie - czym zajmuje się Twoja firma?</h3>
 
-                        <textarea name="main-info" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
-
-
-                        <div className="w-full text-center mt-6">
-                           <button className='mt-10 mx-auto bg-blue hover:bg-blue-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-1') }>Wróć</button>
-                           <button className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-3') }>Dalej</button>
-                        </div>
+                        <textarea name="main-info" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3' value={about} onChange={ (e) => { setAbout(e.target.value) }}></textarea>
                         
 
                      </div>
 
                      {/* STEP 3 */}
-                     <div id="step-3" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-3" ? 'flex' : 'hidden'}`}>
+                     <div id="step-3" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
 
 
                         <div className="flex w-full justify-center items-center mb-10">
@@ -118,7 +125,7 @@ export default function Contact() {
                         </div>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="type" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Strona typu one page
+                           <input type="radio" required name="type" required className="hidden" /><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Strona typu one page
 
                            <p className=' mt-5 text-base italic'>W formie jednej, długiej strony z sekcjami, bez zakładek<br/>
                            <a className="text-violet" target="_blank" href="https://marlily.github.io/foodie/">Zobacz przykład</a>
@@ -133,15 +140,10 @@ export default function Contact() {
                            </p>
                         </label>
 
-                        <div className="w-full text-center mt-6">
-                           <button className='mt-10 mx-auto bg-blue hover:bg-blue-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-2') }>Wróć</button>
-                           <button className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-4') }>Dalej</button>
-                        </div>
-
                      </div>
 
                      {/* STEP 4 */}
-                     <div id="step-4" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-4" ? 'flex' : 'hidden'}`}>
+                     <div id="step-4" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
 
 
                         <div className="flex w-full justify-center items-center mb-10">
@@ -156,37 +158,31 @@ export default function Contact() {
                         </div>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu-brak" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Brak (niezalecane)
+                           <input required type="radio" name="menu" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Brak (niezalecane)
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu-top" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe u góry strony
+                           <input type="radio" name="menu" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe u góry strony
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu-side" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe z boku
+                           <input type="radio" name="menu" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Standardowe z boku
 
                         </label>
 
                         <label className='w-full lg:w-1/2 mt-6 xs:mt-12 cursor-pointer text-center'>
-                           <input type="radio" name="menu-hamburger" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Hamburger - wysuwane po kliknięciu przycisku
+                           <input type="radio" name="menu" required className="hidden"/><span className='h-[1rem] w-[1rem] inline-block rounded-full border mr-3 border-violet'></span> Hamburger - wysuwane po kliknięciu przycisku
 
                         </label>
-
-
-                        <div className="w-full text-center mt-6">
-                           <button className='mt-10 mx-auto bg-blue hover:bg-blue-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-3') }>Wróć</button>
-                           <button className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-5') }>Dalej</button>
-                        </div>
                         
 
                      </div>
 
 
                      {/* STEP 5 */}
-                     <div id="step-5" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-5" ? 'flex' : 'hidden'}`}>
+                     <div id="step-5" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
 
 
                         <div className="flex w-full justify-center items-center mb-10">
@@ -237,26 +233,19 @@ export default function Contact() {
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Inne:</h3>
 
                         <textarea name="menu-others" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
-
-
-                        <div className="w-full text-center mt-6">
-                           <button className='mt-10 mx-auto bg-blue hover:bg-blue-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-4') }>Wróć</button>
-                           <button className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-6') }>Dalej</button>
-                        </div>
-                        
+                       
 
                      </div>
 
 
-
                   
                      {/* STEP 6 */}
-                     <div id="step-6" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-6" ? 'flex' : 'hidden'}`}>
+                     <div id="step-6" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
 
 
                         <div className="flex w-full justify-center items-center mb-10">
                               <Image 
-                                 src="/5.svg"
+                                 src="/6.svg"
                                  alt="ikona"
                                  width={40}
                                  height={40}
@@ -269,26 +258,19 @@ export default function Contact() {
                         <h3 className="w-full font-medium text-md mt-10 mb-5 text-center ">Opisz proszę swoje oczekiwania: co powinno znaleźć się na stronie?</h3>
 
                         <textarea name="page-informations" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
-
-
-                        <div className="w-full text-center mt-6">
-                           <button className='mt-10 mx-auto bg-blue hover:bg-blue-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-5') }>Wróć</button>
-                           <button className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-7') }>Dalej</button>
-                        </div>
-                        
+                       
 
                      </div>
 
 
 
-
                      {/* STEP 7 */}
-                     <div id="step-7" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-7" ? 'flex' : 'hidden'}`}>
+                     <div id="step-7" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex mb-16`}>
 
 
                         <div className="flex w-full justify-center items-center mb-10">
                               <Image 
-                                 src="/5.svg"
+                                 src="/7.svg"
                                  alt="ikona"
                                  width={40}
                                  height={40}
@@ -302,16 +284,10 @@ export default function Contact() {
 
                         <textarea name="style" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
 
-                        <h3 className="w-full font-medium text-md mt-10 mb-3 text-center ">Opcjonalnie: Podaj linki do stron, którymi mogę się inspirować</h3>
+                        <h3 className="w-full font-medium text-md mt-16 mb-3 text-center ">Opcjonalnie: Podaj linki do stron, którymi mogę się inspirować</h3>
                         <p className="w-full text-xs italic text-center mb-5">Polecam wejść na stronę Pinterest, wyszukać hasło "website design" - można tam zobaczyć wiele ciekawych projektów. <br/>Dzięki linkom łatwiej będzie mi zrozumieć Twoje oczekiwania</p>
 
                         <textarea name="urls" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
-
-
-                        <div className="w-full text-center mt-6">
-                           <button className='mt-10 mx-auto bg-blue hover:bg-blue-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-6') }>Wróć</button>
-                           <button className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-8') }>Dalej</button>
-                        </div>
                         
 
                      </div>
@@ -319,12 +295,12 @@ export default function Contact() {
 
 
                      {/* STEP 8 */}
-                     <div id="step-8" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto ${activeStep=="step-8" ? 'flex' : 'hidden'}`}>
+                     <div id="step-8" className={`flex-wrap justify-between max-w-[61.25rem] mx-auto flex`}>
 
 
-                        <div className="flex w-full justify-center items-center mb-10">
+                        <div className="flex w-full justify-center items-center mb-3">
                               <Image 
-                                 src="/5.svg"
+                                 src="/8.svg"
                                  alt="ikona"
                                  width={40}
                                  height={40}
@@ -339,8 +315,7 @@ export default function Contact() {
                         <textarea name="others" className='border border-violet w-full min-w-full max-w-full min-h-[10rem] max-h-[20rem] p-3'></textarea>
 
 
-                        <div className="w-full text-center mt-6">
-                           <button className='mt-10 mx-auto bg-blue hover:bg-blue-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' onClick={ () => setActiveStep('step-7') }>Wróć</button>
+                        <div className="w-full text-center mt-6">  
                            <input type="submit" value="Wyślij" className='mt-10 mx-auto bg-orange hover:bg-orange-hover hover:shadow-lg transition py-3 px-4 mr-3 text-xl font-second text-white cursor-pointer font-bold uppercase' />
                         </div>
                         
