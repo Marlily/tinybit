@@ -9,7 +9,8 @@ import Preloader from './components/Preloader';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import 'swiper/css/effect-creative';
+import { Navigation, EffectCreative } from 'swiper/modules';
 
 export default function Home() {
 
@@ -52,7 +53,7 @@ export default function Home() {
 
                   </header>
 
-                  <section className="section" data-anchor="offer">
+                  <section className="section">
                     <div className="container mx-auto flex flex-wrap lg:flex-nowrap">
                         <Image
                         src="/images/about.png"
@@ -87,7 +88,7 @@ export default function Home() {
                     <ScrollUp fullpageApi={fullpageApi} />
                   </section>
 
-                  <section className="section" data-anchor="portfolio">
+                  <section className="section">
                     <div className="container mx-auto py-12 px-10 lg:px-0">
                       <h2 className="text-4xl font-deco font-bold mb-16 text-center">JAK WYGLĄDA WSPÓŁPRACA ZE MNĄ?</h2>
 
@@ -142,9 +143,21 @@ export default function Home() {
                     <ScrollUp fullpageApi={fullpageApi} />
                   </section>
 
-                  <section className="section section-portfolio h-full w-full" data-anchor="portfolio">
+                  <section className="section section-portfolio h-full w-full">
                     
-                    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                    <Swiper navigation={true} modules={[Navigation, EffectCreative]} className="mySwiper"
+                            grabCursor={true}
+                            effect={'creative'}
+                            creativeEffect={{
+                              prev: {
+                                shadow: true,
+                                translate: ['-20%', 0, -1],
+                              },
+                              next: {
+                                translate: ['100%', 0, 0],
+                              },
+                            }}
+                    >
                       <SwiperSlide>
                         <figure className="image-slider image-slider1 relative w-full h-full bg-[#2e2f30]">
                         <Image
@@ -189,7 +202,7 @@ export default function Home() {
 
                   </section>
 
-                  <section className="section section-contact bg-main" data-anchor="contact">
+                  <section className="section section-contact bg-main">
                     
                     <div className="container mx-auto p-8">
                       <h2 className="text-4xl font-deco text-center text-white mb-10">TinyBitCreations</h2>
@@ -211,7 +224,7 @@ export default function Home() {
                           </label>
 
                           <label className="w-full mt-6 text-xs text-white flex">
-                            <input type="checkbox" name="Wiadomość:" className="form-checkbox hidden mr-2" />
+                            <input type="checkbox" name="Wiadomość:" className="form-checkbox opacity-0 absolute -z-10 mr-2" />
                             <div className="border border-white w-5 h-5 flex justify-center items-center mr-4 relative top-1">
                               <span className="opacity-0">✔</span>
                             </div>
