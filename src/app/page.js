@@ -207,7 +207,7 @@ export default function Home() {
                     <div className="container mx-auto p-8">
                       <h2 className="text-4xl font-deco text-center text-white mb-10">TinyBitCreations</h2>
                       <p className="text-white text-[0.85rem] lg:font-base text-center max-w-3xl mx-auto mb-2">Chcesz zamówić stronę internetową? Potrzebujesz wyceny?<br />Masz pytania? Zapraszam do kontaktu.</p>
-                      <p className="text-white text-3xl mt-10 underline lg:font-base text-center max-w-3xl mx-auto">
+                      <p className="text-white text-1xl lg:text-3xl mt-10 underline lg:font-base text-center max-w-3xl mx-auto">
                             <a href="mailto:kontakt@tinybitcreations.pl">kontakt@tinybitcreations.pl</a>
                       </p>
 
