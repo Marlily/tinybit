@@ -97,7 +97,7 @@ export default function Home() {
                         <Step 
                           img="images/brief.svg"
                           title="BRIEF"
-                          text="Wypełniasz formularz podając potrzebne informacje i oczekiwania dotyczące strony. To ważne, aby podać wszystkie szczegóły."
+                          text="Kontaktujesz się ze mną opisując jakiej strony potrzebujesz - wystarczy napisać maila. Po otrzymaniu tych informacji podaję dokładną wycenę i czas potrzebny na realizację."
                           customClass="mb-10 lg:mb-0"
                         />
 
@@ -111,7 +111,7 @@ export default function Home() {
                         <Step 
                           img="images/project.svg"
                           title="PROJEKT"
-                          text="Przygotowuję projekt graficzny strony w oparciu o podane w formularzu informacje"
+                          text="Przygotowuję projekt graficzny strony w oparciu o podane informacje"
                           customClass="mb-10 lg:mb-0"
                         />
 
@@ -161,7 +161,7 @@ export default function Home() {
                       <SwiperSlide>
                         <figure className="image-slider image-slider1 relative w-full h-full bg-[#2e2f30]">
                         <Image
-                            src="/images/project1.jpg"
+                            src="/images/project1.webp"
                             alt="projekt"
                             className='object-cover object-center'
                             fill={true}
@@ -174,7 +174,7 @@ export default function Home() {
                       <SwiperSlide>
                         <figure className="image-slider image-slider2 relative w-full h-full bg-[#04516A]">
                         <Image
-                            src="/images/project2.jpg"
+                            src="/images/project2.webp"
                             alt="projekt"
                             className='object-cover object-center'
                             fill={true}
@@ -187,7 +187,7 @@ export default function Home() {
                       <SwiperSlide>
                         <figure className="image-slider image-slider3 relative w-full h-full bg-[#8d817b]">
                         <Image
-                            src="/images/project3.png"
+                            src="/images/project3.webp"
                             alt="projekt"
                             className='object-cover object-center'
                             fill={true}
