@@ -207,9 +207,11 @@ export default function Home() {
                     <div className="container mx-auto p-8">
                       <h2 className="text-4xl font-deco text-center text-white mb-10">TinyBitCreations</h2>
                       <p className="text-white text-[0.85rem] lg:font-base text-center max-w-3xl mx-auto mb-2">Chcesz zamówić stronę internetową? Potrzebujesz wyceny?<br />Masz pytania? Zapraszam do kontaktu.</p>
-                      <p className="text-white text-[0.85rem] lg:font-base text-center max-w-3xl mx-auto">Jeśli chcesz poprosić o wycenę i zamówić stronę, wyślij wiadomość - w odpowiedzi podeślę formularz, który pomoże mi poznać Twoje oczekiwania.</p>
+                      <p className="text-white text-3xl mt-10 underline lg:font-base text-center max-w-3xl mx-auto">
+                            <a href="mailto:kontakt@tinybitcreations.pl">kontakt@tinybitcreations.pl</a>
+                      </p>
 
-                      <form method="post" name="wycena" data-netlify="true" className="px-4 lg:px-0 w-full flex flex-wrap mx-auto max-w-[44rem] mt-16">
+                      {/* <form method="post" name="wycena" data-netlify="true" className="px-4 lg:px-0 w-full flex flex-wrap mx-auto max-w-[44rem] mt-16">
 
                           <label className="w-full sm:w-[48%] mb-6 sm:mb-0">
                             <input type="text" name="Imię i nazwisko:" className="text-xs lg:text-base outline-none w-full py-3 lg:py-6 px-3" placeholder="Imię i nazwisko" />
@@ -237,7 +239,7 @@ export default function Home() {
                           </div>
 
 
-                      </form>
+                      </form> */}
                     </div>
 
 
