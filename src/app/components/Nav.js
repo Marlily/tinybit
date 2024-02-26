@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Nav(props) {
 
 
@@ -15,7 +13,6 @@ export default function Nav(props) {
                 <li className="lg:pl-[37px] text-sm w-full text-center mt-5 lg:mt-0 lg:text-left lg:w-auto">
                     <a href="#" className="inline-flex cursor-pointer font-deco text-base py-[9px] px-[19px] relative border border-white uppercase transition hover:-translate-y-1 after:content-[''] after:w-4/5 after:h-px after:bg-white after:opacity-0 hover:after:opacity-100 after:block after:absolute after:-bottom-2 after:left-4 after:transition" onClick={() => props.fullpageApi.moveTo(5)}>Poproś o wycenę</a>
                 </li>
-                <li><Link href="/formularz">About Us</Link></li>
             </ul>
         </nav>
 
