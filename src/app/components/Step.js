@@ -1,11 +1,16 @@
 import Image from 'next/image';
+import { motion } from "framer-motion"
   
 export default function Step(props) {
 
 
     return (
 
-        <li className={`w-full lg:w-[17%] mx-auto flex flex-col ${props.customClass}`}>
+        <motion.li className={`w-full lg:w-[17%] mx-auto flex flex-col ${props.customClass}`}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: props.delay }}
+        >
         <figure className="h-[3rem] max-h-[3rem] min-h-[3rem] lg:h-[3rem] lg:max-h-[5.625rem] lg:min-h-[5.625rem] flex justify-center items-end mb-8">
             <Image
             src={props.img}
@@ -20,7 +25,7 @@ export default function Step(props) {
           <h3 className="text-base mb-4 font-deco font-bold">{props.title}</h3>
           <p className="text-xs sm:text-sm">{props.text}</p>
         </div>
-      </li>
+      </motion.li>
  
     ); 
   }

@@ -11,6 +11,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-creative';
 import { Navigation, EffectCreative } from 'swiper/modules';
+import { motion  } from "framer-motion"
+
 
 export default function Home() {
 
@@ -19,7 +21,6 @@ export default function Home() {
   useEffect(() => {
     setPageLoading(true);
   }, [])
-
 
 
   return (
@@ -42,19 +43,30 @@ export default function Home() {
                         <li>Szybkie działanie</li>
                       </ul>
                     </div>
+                    <motion.div
+                      animate={{ scale: [1,  0.9, 1, 1, 1] }}
+                      transition={{repeat: Infinity, duration: 1}}
+                      >
+                        <Image
+                        src="/images/scroll-mouse.svg"
+                        width={40}
+                        height={101}
+                        alt="scroll up"
+                        className="mx-auto mb-4"
+                      />
+                    </motion.div>
 
-                    <Image
-                    src="/images/scroll-mouse.svg"
-                    width={40}
-                    height={101}
-                    alt="scroll up"
-                    className="mx-auto mb-4"
-                   />
 
                   </header>
 
                   <section className="section">
                     <div className="container mx-auto flex flex-wrap lg:flex-nowrap">
+
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      >
                         <Image
                         src="/images/about.png"
                         width={354}
@@ -62,8 +74,16 @@ export default function Home() {
                         alt="logo"
                         className="mx-auto h-[382px] scale-75 lg:scale-100"
                       />
+                    </motion.div>
+
 
                       <div className="p-8 lg:pl-12">
+
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.8 }}
+                      >
                         <h2 className="text-4xl font-deco font-bold mb-10 text-center lg:text-left mt-10 lg:mt-0">MARTYNA BANAŚ</h2>
                         <p className="text-base mb-8">Cześć! Zajmuję się tworzeniem indywidualnych stron firmowych.<br/>
                         Wykonam dla Ciebie szybką, nowoczesną i łatwą w zarządzaniu stronę dopasowaną do Twojego bizesu.
@@ -80,6 +100,7 @@ export default function Home() {
                         <div className="text-center lg:text-left">
                           <a href="#" className="btn uppercase border border-main text-main px-5 py-3 text-2xl font-deco inline-block mt-8 hover:bg-main hover:text-white relative transition" onClick={() => fullpageApi.moveTo(5)}>Poproś o wycenę</a>
                         </div>
+                        </motion.div>
                         
                       </div>
 
@@ -94,11 +115,13 @@ export default function Home() {
 
                       <ul className="flex gap-4 lg:gap-8 flex-wrap">
 
+
                         <Step 
                           img="images/brief.svg"
                           title="BRIEF"
                           text="Kontaktujesz się ze mną opisując jakiej strony potrzebujesz - wystarczy napisać maila. Po otrzymaniu tych informacji podaję dokładną wycenę i czas potrzebny na realizację."
                           customClass="mb-10 lg:mb-0"
+                          delay={0.3}
                         />
 
                         <Step 
@@ -106,6 +129,7 @@ export default function Home() {
                           title="UMOWA"
                           text="Podpisujemy umowę zawierającą termin realizacji i koszt, w tym zadatek. Dzięki temu współpraca będzie pewna i bezpieczna dla obu stron."
                           customClass="mb-10 lg:mb-0"
+                          delay={0.5}
                         />
 
                         <Step 
@@ -113,6 +137,7 @@ export default function Home() {
                           title="PROJEKT"
                           text="Przygotowuję projekt graficzny strony w oparciu o podane informacje"
                           customClass="mb-10 lg:mb-0"
+                          delay={0.7}
                         />
 
                         <Step 
@@ -120,6 +145,7 @@ export default function Home() {
                           title="AKCEPTACJA"
                           text="Przesyłam projekt do akceptacji i w razie potrzeby wprowadzam poprawki według Twoich uwag"
                           customClass="mb-10 lg:mb-0"
+                          delay={0.9}
                         />
 
                         <Step 
@@ -127,14 +153,19 @@ export default function Home() {
                           title="REALIZACJA"
                           text="Wykonuję stronę internetową, umieszczam ją na hostingu, podpinam domenę i zabezpieczam. Na koniec przekazuję instrukcję obsługi strony. Gotowe!"
                           customClass="mb-10 lg:mb-0"
+                          delay={1.1}
                         />
 
                        
                       </ul>
 
-                      <div className="text-center mt-5">
+                      <motion.div className="text-center mt-5"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                      >
                         <a href="#" className="btn uppercase border border-main bg-main text-white px-5 py-3 text-2xl font-deco inline-block mt-8 hover:bg-white hover:text-main relative transition" onClick={() => fullpageApi.moveTo(5)}>Poproś o wycenę</a>
-                      </div>
+                      </motion.div>
 
                       
 
@@ -205,11 +236,19 @@ export default function Home() {
                   <section className="section section-contact bg-main">
                     
                     <div className="container mx-auto p-8">
-                      <h2 className="text-4xl font-deco text-center text-white mb-10">TinyBitCreations</h2>
-                      <p className="text-white text-[0.85rem] lg:font-base text-center max-w-3xl mx-auto mb-2">Chcesz zamówić stronę internetową? Potrzebujesz wyceny?<br />Masz pytania? Zapraszam do kontaktu.</p>
-                      <p className="text-white text-1xl lg:text-3xl mt-10 underline lg:font-base text-center max-w-3xl mx-auto">
+                      <motion.h2 
+                      initial={{ opacity: 0 }} 
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.3, delay: 0.3 }} 
+                      className="text-4xl font-deco text-center text-white mb-10"
+                      >
+                        TinyBitCreations
+                      </motion.h2>
+
+                      <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.3, delay: 0.4 }} className="text-white text-[0.85rem] lg:font-base text-center max-w-3xl mx-auto mb-2">Chcesz zamówić stronę internetową? Potrzebujesz wyceny?<br />Masz pytania? Zapraszam do kontaktu.</motion.p>
+                      <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.3, delay: 0.5 }} className="text-white text-1xl lg:text-3xl mt-10 underline lg:font-base text-center max-w-3xl mx-auto">
                             <a href="mailto:kontakt@tinybitcreations.pl">kontakt@tinybitcreations.pl</a>
-                      </p>
+                      </motion.p>
 
                       {/* <form method="post" name="wycena" data-netlify="true" className="px-4 lg:px-0 w-full flex flex-wrap mx-auto max-w-[44rem] mt-16">
 
