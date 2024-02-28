@@ -15,6 +15,8 @@ const jetBrains = JetBrains_Mono({
 export const metadata = {
   title: "TinyBitCreations Strony internetowe",
   description: "Firmowe strony internetowe",
+  metadataBase: new URL('https://tinybitcreations.pl/'),
+
 };
 
 export default function RootLayout({ children }) {
