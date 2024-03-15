@@ -228,6 +228,19 @@ export default function Home() {
                         <h4>Strona internetowa</h4>
                       </SwiperSlide>
 
+                      <SwiperSlide>
+                        <figure className="image-slider image-slider3 relative w-full h-full bg-[#ad6262]">
+                        <Image
+                            src="/images/project4.webp"
+                            alt="projekt"
+                            className='object-cover object-center'
+                            fill={true}
+                        />
+                        </figure>
+
+                        <h4>Strona internetowa</h4>
+                      </SwiperSlide>
+
                      </Swiper>
 
 
