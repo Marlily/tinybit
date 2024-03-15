@@ -229,7 +229,7 @@ export default function Home() {
                       </SwiperSlide>
 
                       <SwiperSlide>
-                        <figure className="image-slider image-slider3 relative w-full h-full bg-[#ad6262]">
+                        <figure className="image-slider image-slider1 relative w-full h-full bg-[#ad6262]">
                         <Image
                             src="/images/project4.webp"
                             alt="projekt"
