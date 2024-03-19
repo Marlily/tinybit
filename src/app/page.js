@@ -5,6 +5,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import Nav from './components/Nav';
 import ScrollUp from './components/ScrollUp';
 import Step from './components/Step';
+import Price from './components/Price';
 import Preloader from './components/Preloader';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
@@ -98,7 +99,7 @@ export default function Home() {
                         </ul>
 
                         <div className="text-center lg:text-left">
-                          <a href="#" className="btn uppercase border border-main text-main px-5 py-3 text-2xl font-deco inline-block mt-8 hover:bg-main hover:text-white relative transition" onClick={() => fullpageApi.moveTo(5)}>Poproś o wycenę</a>
+                          <a href="#" className="btn uppercase border border-main text-main px-5 py-3 text-2xl font-deco inline-block mt-8 hover:bg-main hover:text-white relative transition" onClick={() => fullpageApi.moveTo(6)}>Poproś o wycenę</a>
                         </div>
                         </motion.div>
                         
@@ -164,7 +165,59 @@ export default function Home() {
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <a href="#" className="btn uppercase border border-main bg-main text-white px-5 py-3 text-2xl font-deco inline-block mt-8 hover:bg-white hover:text-main relative transition" onClick={() => fullpageApi.moveTo(5)}>Poproś o wycenę</a>
+                        <a href="#" className="btn uppercase border border-main bg-main text-white px-5 py-3 text-2xl font-deco inline-block mt-8 hover:bg-white hover:text-main relative transition" onClick={() => fullpageApi.moveTo(6)}>Poproś o wycenę</a>
+                      </motion.div>
+
+                      
+
+                    </div>
+                    
+                    <ScrollUp fullpageApi={fullpageApi} />
+                  </section>
+
+                  <section className="section">
+                    <div className="container mx-auto py-12 px-10 lg:px-0">
+                      <h2 className="text-4xl font-deco font-bold mb-16 text-center">CENNIK</h2>
+
+                      <ul className="flex gap-4 lg:gap-8 flex-wrap">
+
+                        <Price 
+                          img="images/brief.svg"
+                          title="STRONA ONEPAGE"
+                          text="Jedna, długa strona, bez dodatkowych zakładek. Posiada menu kierujące do konkretnych sekcji."
+                          price="1000 zł"
+                          customClass="mb-10 lg:mb-0"
+                          delay={0.7}
+                        />
+
+                        <Price 
+                          img="images/brief.svg"
+                          title="STRONA Z ZAKŁADKAMI"
+                          text="Klasyczna strona składająca się ze strony głównej i podstron."
+                          price="1400 zł"
+                          customClass="mb-10 lg:mb-0"
+                          delay={0.5}
+                        />
+
+                        <Price 
+                          img="images/brief.svg"
+                          title="OPIEKA NAD STRONĄ"
+                          text="Opieka comiesięczna lub jednorazowa."
+                          hideList="true"
+                          price="150 zł"
+                          customClass="mb-10 lg:mb-0"
+                          delay={0.3}
+                        />
+
+                       
+                      </ul>
+
+                      <motion.div className="text-center mt-5"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <a href="#" className="btn uppercase border border-main bg-main text-white px-5 py-3 text-2xl font-deco inline-block mt-8 hover:bg-white hover:text-main relative transition" onClick={() => fullpageApi.moveTo(6)}>Skontaktuj się</a>
                       </motion.div>
 
                       
